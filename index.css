@@ -77,8 +77,11 @@ a:hover {
 }
 
   .nav {
-    padding-left: 0;
-    margin-bottom: 0;
+    padding-left: 0%;
+    margin-bottom:1%;
+    margin-top: -71%;
+    margin-left: -5%;
+    margin-right: 0%;
     list-style: none;
   }
  
@@ -296,7 +299,7 @@ p{
 .upblc{
   border-radius: 50px;
   justify-content: left;
-  position: absolute;
+  position: inherit;
   margin-top: 2%;
   
 }
@@ -304,9 +307,11 @@ p{
 .upblcaddress{
  text-align: justify;
  display: inline-block;
- position: absolute;
- margin-left: 50%;
- margin-top: 2%;
+ position: inherit;
+ margin-left: 5%;
+ margin-right: 0%;
+ margin-top: 0%;
+ margin-bottom: 0%;
 }
 
 .upblcimg{
@@ -317,6 +322,7 @@ p{
   display: inline-block;
   position: absolute;
   margin-left: 70%;
+  margin-right: 50%;
   margin-top: -2%;
    
 }
@@ -325,7 +331,7 @@ p{
  width: 100%;
  height: 450px;
  position: inherit;
- margin-top: 35%;
+ margin-top: 0%;
 border-radius: 20px;
 border-style: double;
 border-color: grey;
