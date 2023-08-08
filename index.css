@@ -516,3 +516,112 @@ cursor: pointer;
   margin-left: 25%;
   cursor: pointer;
 }
+
+/* ////////////////Accordion - Practice English*/
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-radius: 20px;
+  padding-left: 5%;
+  font-size: 20px;
+  
+}
+
+
+.active,.accordion:hover {
+  background-color: #ccc;
+  color: rgb(6, 32, 36);
+  
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  padding-left: 3%;
+}
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+
+
+.field_title{
+  padding-left: 5%;
+  width: 800px;
+  text-decoration: none;
+  color: #02aa80;
+}
+
+.field_subtitle{
+  padding-left: 5%;
+  width: 600px;
+  color: #02694f;
+  position: sticky;
+}
+
+.field_topic{
+  padding-left: 5%;
+  width: 600px;
+  color: #8b4300;
+  position: sticky;
+}
+
+.field_topic_paragraph{
+  padding-left: 5%;
+  width: 600px;
+  color: #002e22;
+  position: sticky;
+  
+}
+
+.mua_0{
+ position: absolute;
+ margin-left: 50%;
+ margin-top: -5%;
+ margin-right: 5%;
+
+}
+
+.mua_1{
+  width: 600px;
+  height: 100px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.mua_2{
+ width: 600px ;
+ height: 400px;
+ box-sizing: border-box;
+ border-radius: 20px;
+}
+
+.mua_info_01{
+  background-color: #eefdf84b;
+
+}
+.mua_info{
+ background-color: #e0f5f53a;
+
+}
+
