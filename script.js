@@ -1,7 +1,7 @@
 
 
 function init() {
-    if (window.location.pathname === 'practiceenglish.html') { //replace this on GITHUB
+    if (window.location.pathname === 'contextII.html') { //validate the result of this on GITHUB
     var count = 1; // set secconds
     var counter = setInterval(timer, 5000 * count);
 
