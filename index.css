@@ -625,3 +625,29 @@ cursor: pointer;
 
 }
 
+/* survey for CLEI 6-1 */
+.collage_2{
+  width: 95%;
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(150px, 1fr));
+  grid-gap: 1.5px;
+  
+}
+
+.collage_2 img{
+  border-radius: 2.5px;
+  cursor: pointer;
+}
+
+.collage_2 img:hover{
+  transform: scale(1.5) rotate(0.5deg);
+  box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+  border-radius: 5px;
+  transition: 1s;
+  background-color: antiquewhite;
+  opacity: 90%;
+
+}
