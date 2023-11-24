@@ -651,3 +651,29 @@ cursor: pointer;
   opacity: 90%;
 
 }
+
+.internship_1_title{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  text-align: justify;
+  color: #444;
+  margin-left: 5%;
+}
+
+.internship_1_video{
+ margin-left: 5%;
+ width: 560px;
+ height: 315px;
+ border: beige;
+ border-width: 10px;
+ border-radius: 15px;
+
+}
+
+.internship_1_video_link{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  text-align: justify;
+  color: #444;
+  
+}
