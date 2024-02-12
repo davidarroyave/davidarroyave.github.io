@@ -44,7 +44,7 @@ a:hover {
 }
 
 #twitter:hover{
-    background-color: rgba(0, 238, 255, 0.445);
+    background-color: rgba(119, 68, 59, 0.445);
     height: 50px;
     width: 50px;
     transition: all 500ms linear;
@@ -677,3 +677,20 @@ cursor: pointer;
   color: #444;
   
 }
+
+.lfrm_1{
+  width: 600px ;
+  height: 400px;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+}
+
+.lfrm_2{
+  width: 600px ;
+  height: 450px;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+}
+
