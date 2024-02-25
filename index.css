@@ -694,3 +694,47 @@ cursor: pointer;
 
 }
 
+/* ESTRUCTURA ORGANIZACIONAL IMG */
+
+.estructura_1{
+  margin-top: 20%;
+  }
+
+  .field_subtitle_horizonte{
+    padding-left: 5%;
+    margin-left: 35%;
+    margin-top: 2%;
+    width: 600px;
+    color: #02694f;
+    position: sticky;
+
+  }
+
+  .organigrama{
+    width: 600px ;
+    height: 450px;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+
+  .organigrama:hover{
+    box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+    border-radius: 30px;
+    transform: scale(1.2) rotate(0deg) ;
+    transition: 1.5s;
+  
+  }
+
+  .malla_1{
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-right: 1%;
+  }
+
+  .malla_2{
+    margin-bottom: -25%;
+    margin-right: 1%;
+    height: 480px;
+    border-radius: 10px;
+
+  }
