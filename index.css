@@ -467,7 +467,7 @@ input[type=submit]:hover {
 }
 
 .photos_1 img:hover{
-  transform: scale(1) rotate(15deg);
+  transform: scale(1.1) rotate(0.5deg);
   box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
   border-radius: 30px;
   transition: 0.6s;
@@ -737,4 +737,33 @@ cursor: pointer;
     height: 480px;
     border-radius: 10px;
 
+  }
+
+  .collage_3{
+    width: 85%;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(150px, 1fr));
+    grid-gap: 0%;
+
+  }
+
+  
+  .collage_3 img{
+    border-radius: 2.5px;
+    cursor: pointer;
+    width: 280px;
+    height: 250px;
+   }
+  
+  .collage_3 img:hover{
+    transform: scale(1.0) rotate(0.5deg);
+    box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+    border-radius: 5px;
+    transition: 0.8s;
+    background-color: antiquewhite;
+    opacity: 90%;
+  
   }
