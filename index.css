@@ -135,13 +135,18 @@ a:hover {
     .navbar-nav .open .dropdown-menu > li > a:focus {
       background-image: none;
     }
+    
   }
 
 
-  @media (min-width: 768px) {
+  @media (min-width: 479px) {
     .navbar-nav {
       float: left;
-      margin: 0;
+      margin-left: 0%;
+      margin-right: -52%;
+      margin-bottom: 2%;
+      margin-top: 0%;
+
     }
     .navbar-nav > li {
       float: left;
@@ -150,6 +155,12 @@ a:hover {
       padding-top: 15px;
       padding-bottom: 15px;
     }
+    .collage_3{
+      justify-content: center;
+                  
+    }
+        
+
   }
 
 
