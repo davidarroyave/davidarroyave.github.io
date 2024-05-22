@@ -523,10 +523,7 @@ cursor: pointer;
   cursor: pointer;
 }
 
-.sena{
-  margin-left: 25%;
-  cursor: pointer;
-}
+
 
 /* ////////////////Accordion - Practice English*/
 
@@ -770,6 +767,35 @@ cursor: pointer;
    }
   
   .collage_3 img:hover{
+    transform: scale(1.0) rotate(0.5deg);
+    box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+    border-radius: 5px;
+    transition: 0.8s;
+    background-color: antiquewhite;
+    opacity: 90%;
+  
+  }
+
+  .collage_4{
+    width: 85%;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    grid-gap: 0%;
+
+  }
+
+  
+  .collage_4 img{
+    border-radius: 25px;
+    cursor: pointer;
+    width: 400px;
+    height: 300px;
+   }
+  
+  .collage_4 img:hover{
     transform: scale(1.0) rotate(0.5deg);
     box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
     border-radius: 5px;
