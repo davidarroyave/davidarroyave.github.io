@@ -5,7 +5,7 @@
     margin-bottom: 0%;
     margin-left: 0%;
     margin-right: 0%;
-}
+  }
 
 .nav {
   padding-left: 0;
@@ -193,9 +193,8 @@ border-width: 2.5px;
     margin-right: 0%;
     li{
       display: inline-block;
-      margin: 0 10px;
+      margin: 10px;
     }
-    
   }
 
   .socials:hover{
@@ -978,12 +977,12 @@ cursor: pointer;
   }
 
   .collage_3{
-    width: 85%;
-    margin-right: 2%;
-    margin-left: 2%;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
     margin-top: 10%;
     display: grid;
-    grid-template-columns: repeat(7, minmax(150px, 1fr));
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
     grid-gap: 0%;
     
   }
@@ -993,7 +992,7 @@ cursor: pointer;
     border-radius: 2.5px;
     cursor: pointer;
     width: 280px;
-    height: 250px;
+    height: 305px;
     
    }
   
@@ -1008,13 +1007,13 @@ cursor: pointer;
   }
 
   .collage_4{
-    width: 85%;
+    width: 90%;
     margin-right: 2%;
     margin-left: 2%;
     margin-top: 2%;
     display: grid;
     grid-template-columns: repeat(3, minmax(150px, 1fr));
-    grid-gap: 0%;
+    grid-gap: 1%;
     max-width: 100%; 
   }
 
