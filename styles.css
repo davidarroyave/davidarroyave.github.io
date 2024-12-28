@@ -1,0 +1,835 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
+html, body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: linear-gradient(to bottom, #ffffff, #d9d9d9); /* White-silver gradient */
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background-color: rgb(89, 98, 102);
+    border-radius: 5px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    margin-right: 0;
+    margin-bottom: -0.5%;
+    padding: 0;
+    gap: 12px;
+    opacity: 0.7;
+}
+
+.socials:hover {
+    transform: scale(1);
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Video Banner Styling */
+.video-banner {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    margin-top: 0.5%;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+
+main {
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Carousel Styling */
+.carousel, .carousel2 {
+    position: relative;
+    width: 100%;
+    max-width: 620px; /* Ensure both carousels use full available width */
+    max-height: 350px;
+    overflow: hidden;
+    margin: 20px auto; /* Center carousel vertically by default */
+}
+
+/* Carousel 1 (First) Styling */
+.carousel {
+    margin-left: 40%; /* Move carousel to the right */
+    margin-top: -60%; /* Move carousel upwards slightly */
+}
+
+/* Carousel 2 (Second) Styling */
+.carousel2 {
+    margin-left: 40%; /* Move carousel 2 to the right (to avoid overlap) */
+    margin-top: -42%; /* Slightly adjust the vertical position */
+}
+
+.carousel-images, .carousel-images2 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+
+.carousel-images, .carousel-images2 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+
+.gallery-image, .gallery-image2 {
+    min-width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: contain;
+    display: block;
+}
+
+.prev-btn, .next-btn, .prev-btn2, .next-btn2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.prev-btn, .prev-btn2 {
+    left: 10px;
+}
+
+.next-btn, .next-btn2 {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover,
+.prev-btn2:hover, .next-btn2:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Gallery Styling */
+.image-gallery2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: -5px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.gallery-image {
+    width: 100px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effects */
+.gallery-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+}
+
+.gallery-image:hover::before {
+    opacity: 1;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .image-gallery2 {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* More columns on smaller screens */
+    }
+
+    .carousel, .carousel2 {
+        max-width: 100%;
+        margin: 20px 0; /* Add margin to ensure spacing between elements */
+    }
+
+    .prev-btn, .next-btn, .prev-btn2, .next-btn2 {
+        font-size: 18px; /* Adjust button size for smaller screens */
+        padding: 8px;
+    }
+
+    .gallery-image:hover {
+        transform: scale(1.02); /* Slightly smaller zoom on mobile */
+    }
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+h1, h2 {
+    color: #444;
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* General Styling */
+.projects-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    margin-top: -20%;
+}
+
+
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+    justify-items: center;
+}
+
+.video-item {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.video-item:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.project-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    opacity: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.video-item:hover .video-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.video-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.video-overlay p {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .projects-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .video-item {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Forms */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #333;
+}
+
+/* Responsive Design for Navigation on Small Screens */
+@media (max-width: 767px) {
+    nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .carousel, .carousel2 {
+        max-width: 100%;
+    }
+}
+
+/* Dropdown Button Styling */
+.dropbtn {
+    background-color: white;
+    padding: 8px 12px; /* Reduced padding for a smaller button */
+    font-size: 15px; /* Smaller font size for a more compact look */
+    border: none;
+    text-decoration: none;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -1.3%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Menu Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: auto; /* Removed fixed width, adjusts to content */
+    padding: 5px 0; /* Reduced padding inside the menu */
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2); /* Lighter shadow */
+    z-index: 1;
+}
+
+/* Dropdown Menu Links */
+.dropdown-content a {
+    color: rgba(0, 0, 0, 0.527);
+    padding: 6px 10px; /* Reduced padding for smaller link area */
+    text-decoration: none;
+    display: block;
+    font-size: 13px; /* Slightly smaller font */
+    font-style: italic;
+}
+
+/* Hover Effect for Menu Links */
+.dropdown-content a:hover {
+    color: #fff;
+    background-color: rgb(89, 98, 102);
+    border-radius: 2px;
+}
+
+/* Show Dropdown Menu on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hover Effect for Dropdown Button */
+.dropdown:hover .dropbtn {
+    color: #fff;
+    background-color: rgb(89, 98, 102);
+    border-radius: 5px;
+    box-shadow: none; /* Avoid box-shadow changes */
+    outline: none; /* Prevent outline from appearing */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Internship2 */
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border-radius: 20px;
+    padding-left: 5%;
+    font-size: 20px;
+    
+  }
+  
+  
+  .active,.accordion:hover {
+    background-color: #ccc;
+    color: rgb(6, 32, 36);
+    
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    padding-left: 3%;
+  }
+  
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
+  .field_title{
+    width: 800px;
+    text-decoration: none;
+    color: #02aa80;
+    position: relative;
+    justify-content: center;
+    text-align: left;
+    margin-left: 1%;
+    margin-top: 2%;
+    max-width: 100%; 
+  }
+  
+  .field_subtitle{
+    padding-left: 5%;
+    width: 600px;
+    color: #02694f;
+    position: relative;
+    margin-left: -3%;
+    justify-content: left;
+    text-align: justify;
+    max-width: 100%; 
+  }
+  
+  .field_topic{
+    padding-left: 5%;
+    width: 600px;
+    color: #8b4300;
+    position: relative;
+    margin-left: -3%;
+    justify-content: left;
+    text-align: justify;
+    max-width: 100%; 
+  }
+  
+  .field_topic_paragraph{
+    padding-left: 5%;
+    width: 600px;
+    color: #002e22;
+    text-align: left;
+    margin-top:0%;
+    margin-left: -3%;
+    justify-content: left;
+    text-align: justify;
+    position: relative;
+    max-width: 100%; 
+  }
+  
+  .mua_0 {
+   text-align: center;
+   margin-left:2%;
+   margin-top: 0%;
+   margin-right: 2%;
+   margin-bottom: 0%;
+   max-width: 100%; 
+   
+  } 
+  
+  .mua_1{
+   width: 400px;
+   height: 50px;
+   margin-left:0%;
+   margin-top: 0%;
+   margin-right: 70%;
+   margin-bottom: 0%;
+   max-width: 100%; 
+  
+  }
+  
+  .mua_2{
+   width: 400px;
+   height: 200px;
+   margin-top: 0%;
+   margin-right: 70%;
+   margin-bottom: 0%;
+   max-width: 100%; 
+   border-radius: 20px; 
+   max-width: 100%;
+   
+  }
+  
+  .mua_info_01{
+    background-color: #eefdf84b;
+    position: relative;
+  
+  }
+  .mua_info{
+   background-color: #e0f5f53a;
+   position: relative;
+  }
+
+  /* Internship3 */
+  .lfrm_0 {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    flex: 1;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: flex-end; 
+    position: absolute;
+    margin-left: 30%;
+  }
+  
+  .lfrm_0 img {
+    max-width: 100%;
+    width: 550px;
+    height: 350px;
+    margin: 10px 0; /* Corrected shorthand margin */
+    border-radius: 30px;
+  }
+  
+  
+  .lfrm_info p{
+    margin-top: 0%;
+    
+   
+  }
+  
+  .lfrm_info .field_subtitle{
+    margin-top: 0%;
+    
+  }
+  
+  .lfrm_info  .field_topic_paragraph {
+    margin-top: 0%;
+    
+  }
+  
+  .lfrm_info .field_topic{
+    margin-top: 0%;
+    
+  }
+  
+  
+  /* survey for CLEI 6-1 */
+  .collage_2{
+    width: 95%;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 3%;
+    display: grid;
+    grid-template-columns: repeat(8, minmax(150px, 1fr));
+    grid-gap: 1.5px;
+    max-width: 100%; 
+  }
+  
+  .collage_2 img{
+    border-radius: 2.5px;
+    cursor: pointer;
+  }
+  
+  .collage_2 img:hover{
+    transform: scale(1.5) rotate(0.5deg);
+    box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+    border-radius: 5px;
+    transition: 1s;
+    background-color: antiquewhite;
+    opacity: 90%;
+  
+  }
+  
+  .internship_1_title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    text-align: justify;
+    color: #444;
+    margin-left: 5%;
+    max-width: 100%; 
+  }
+  
+  .internship_1_video{
+   margin-left: 5%;
+   width: 560px;
+   height: 315px;
+   border: beige;
+   border-width: 10px;
+   border-radius: 15px;
+   max-width: 100%; 
+  }
+  
+  .internship_1_video_link{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    text-align: justify;
+    color: #444;
+    max-width: 100%; 
+    
+  }
+  
+  .lfrm_1{
+    width: 600px ;
+    height: 400px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    max-width: 100%; 
+  }
+  
+  .lfrm_2{
+    width: 600px ;
+    height: 450px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    max-width: 100%; 
+  }
+  
+  /* ESTRUCTURA ORGANIZACIONAL IMG */
+  
+  .estructura_1{
+    margin-top: 20%;
+    max-width: 100%; 
+    max-width: 100%; 
+    }
+  
+    .field_subtitle_horizonte{
+      padding-left: 0%;
+      margin-left: 2%;
+      margin-top: 2%;
+      width: 600px;
+      color: #02694f;
+      position: sticky;
+      max-width: 100%; 
+      text-align: left;
+    }
+  
+    .organigrama{
+      width: 600px ;
+      height: 450px;
+      box-sizing: border-box;
+      border-radius: 20px;
+      max-width: 100%; 
+    }
+  
+    .organigrama:hover{
+      box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+      border-radius: 30px;
+      transform: scale(1.2) rotate(0deg) ;
+      transition: 1.5s;
+    
+    }
+  
+    .malla_1{
+      margin-top: 5%;
+      margin-left: 25%;
+      margin-right: 1%;
+      max-width: 100%; 
+      
+    }
+  
+    .malla_2{
+      margin-bottom: -25%;
+      margin-right: 1%;
+      height: 480px;
+      border-radius: 10px;
+      max-width: 100%; 
+  
+    }
+  
+    .collage_3{
+      width: 90%;
+      margin-right: 5%;
+      margin-left: 5%;
+      margin-top: 15%;
+      display: grid;
+      grid-template-columns: repeat(1, minmax(150px, 1fr));
+      grid-gap: 0%;
+      
+    }
+  
+    
+    .collage_3 img{
+      border-radius: 20px;
+      cursor: pointer;
+      width: 280px;
+      height: 305px;
+  
+      
+     }
+    
+    .collage_3 img:hover{
+      transform: scale(1.0) rotate(0.5deg);
+      box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+      border-radius: 5px;
+      transition: 0.8s;
+      background-color: antiquewhite;
+      opacity: 90%;
+    
+    }
+  
+    .collage_4{
+      width: 90%;
+      margin-right: 2%;
+      margin-left: 2%;
+      margin-top: -70%;
+      display: grid;
+      grid-template-columns: repeat(1, minmax(150px, 1fr));
+      grid-gap: 2%;
+      max-width: 100%; 
+    }
+  
+    
+    .collage_4 img{
+      border-radius: 25px;
+      cursor: pointer;
+      width: 400px;
+      height: 300px;
+      max-width: 100%; 
+     }
+    
+    .collage_4 img:hover{
+      transform: scale(1.0) rotate(0.5deg);
+      box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+      border-radius: 5px;
+      transition: 0.8s;
+      background-color: antiquewhite;
+      opacity: 90%;
+    
+    }
