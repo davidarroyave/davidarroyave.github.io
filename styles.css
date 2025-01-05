@@ -285,7 +285,7 @@ img:hover {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    transition: opacity 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .video-overlay {
@@ -302,7 +302,7 @@ img:hover {
     align-items: center;
     text-align: center;
     padding: 10px;
-    transition: opacity 0.3s ease;
+    transition: 0.3s ease;
     border-radius: 10px;
 }
 
@@ -331,7 +331,7 @@ img:hover {
 
 /* Footer */
 footer {
-    background-color: #ccc
+    background-color: #ccc;
     color: #fff;
     text-align: center;
     padding: 20px;
