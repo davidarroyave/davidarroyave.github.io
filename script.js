@@ -136,4 +136,8 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+document.getElementById("phone").addEventListener("input", function (event) {
+    // Replace anything that's not a number
+    this.value = this.value.replace(/[^0-9]/g, '');
+});
   

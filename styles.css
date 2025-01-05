@@ -69,11 +69,10 @@ nav ul li a:hover {
     transition: color 0.3s, transform 0.3s;
 }
 
-/* Video Banner Styling */
 .video-banner {
     position: relative;
     width: 100%;
-    height: 30px;
+    height: 25px;
     overflow: hidden;
     margin-top: 0.5%;
 }
@@ -99,26 +98,24 @@ ul {
     list-style-type: none;
 }
 
-/* Carousel Styling */
 .carousel, .carousel2 {
     position: relative;
     width: 100%;
-    max-width: 620px; /* Ensure both carousels use full available width */
-    max-height: 350px;
+    max-width: 620px;
+    max-height: 440px;
     overflow: hidden;
-    margin: 20px auto; /* Center carousel vertically by default */
+    margin: 20px auto;
 }
 
-/* Carousel 1 (First) Styling */
 .carousel {
-    margin-left: 40%; /* Move carousel to the right */
-    margin-top: -60%; /* Move carousel upwards slightly */
+    margin-left: 40%;
+    margin-top: -60%;
 }
 
-/* Carousel 2 (Second) Styling */
 .carousel2 {
     margin-left: 40%; /* Move carousel 2 to the right (to avoid overlap) */
-    margin-top: -42%; /* Slightly adjust the vertical position */
+    margin-top: -42%;
+
 }
 
 .carousel-images, .carousel-images2 {
@@ -169,7 +166,6 @@ ul {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Gallery Styling */
 .image-gallery2 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -187,7 +183,6 @@ ul {
     cursor: pointer;
 }
 
-/* Hover Effects */
 .gallery-image:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -218,16 +213,16 @@ ul {
 
     .carousel, .carousel2 {
         max-width: 100%;
-        margin: 20px 0; /* Add margin to ensure spacing between elements */
+        margin: 20px 0;
     }
 
     .prev-btn, .next-btn, .prev-btn2, .next-btn2 {
-        font-size: 18px; /* Adjust button size for smaller screens */
+        font-size: 18px;
         padding: 8px;
     }
 
     .gallery-image:hover {
-        transform: scale(1.02); /* Slightly smaller zoom on mobile */
+        transform: scale(1.02);
     }
 }
 
@@ -246,7 +241,6 @@ h1, h2 {
     color: #444;
 }
 
-/* Image Styling */
 img {
     max-width: 100%;
     height: auto;
@@ -259,7 +253,6 @@ img:hover {
     transform: scale(1.05);
 }
 
-/* General Styling */
 .projects-section {
     padding: 50px 20px;
     background-color: #f4f4f4;
@@ -285,7 +278,7 @@ img:hover {
 }
 
 .video-item:hover {
-    transform: scale(1.05); /* Zoom effect on hover */
+    transform: scale(1.05);
 }
 
 .project-video {
@@ -301,7 +294,7 @@ img:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     color: white;
     display: flex;
@@ -338,7 +331,7 @@ img:hover {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #ccc
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -378,7 +371,7 @@ form button:hover {
     background-color: #333;
 }
 
-/* Responsive Design for Navigation on Small Screens */
+/* Responsive Design */
 @media (max-width: 767px) {
     nav ul {
         flex-direction: column;
@@ -407,8 +400,8 @@ form button:hover {
 /* Dropdown Button Styling */
 .dropbtn {
     background-color: white;
-    padding: 8px 12px; /* Reduced padding for a smaller button */
-    font-size: 15px; /* Smaller font size for a more compact look */
+    padding: 8px 12px;
+    font-size: 15px;
     border: none;
     text-decoration: none;
     color: #333;
@@ -419,46 +412,40 @@ form button:hover {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Dropdown Container */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-/* Dropdown Menu Content */
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: auto; /* Removed fixed width, adjusts to content */
-    padding: 5px 0; /* Reduced padding inside the menu */
+    min-width: auto;
+    padding: 5px 0;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2); /* Lighter shadow */
     z-index: 1;
 }
 
-/* Dropdown Menu Links */
 .dropdown-content a {
     color: rgba(0, 0, 0, 0.527);
     padding: 6px 10px; /* Reduced padding for smaller link area */
     text-decoration: none;
     display: block;
-    font-size: 13px; /* Slightly smaller font */
+    font-size: 13px;
     font-style: italic;
 }
 
-/* Hover Effect for Menu Links */
 .dropdown-content a:hover {
     color: #fff;
     background-color: rgb(89, 98, 102);
     border-radius: 2px;
 }
 
-/* Show Dropdown Menu on Hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Hover Effect for Dropdown Button */
 .dropdown:hover .dropbtn {
     color: #fff;
     background-color: rgb(89, 98, 102);
@@ -833,3 +820,181 @@ form button:hover {
       opacity: 90%;
     
     }
+
+/* Gallery (photos) */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.video_gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: 3%;   
+}
+
+.video-column {
+    flex: 1 1 calc(33.33% - 10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-column video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+.video-column:hover::after {
+    content: 'Watch';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.video-column:hover video {
+    filter: brightness(1.2); /* Dim video on hover for the "Watch" effect */
+}
+
+
+@media (max-width: 768px) {
+    .video-column {
+        flex: 1 1 calc(50% - 10px); /* Two videos per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-column {
+        flex: 1 1 100%; /* One video per row */
+    }
+}
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+/* footer contact */
+
+.contact-section {
+    padding: 30px;
+    background-color: #f7f7f7;  /* Light gray background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Form Heading */
+.contact-section h2 {
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Label Styling */
+.contact-section label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+/* Input and Textarea Styling */
+.contact-section input[type="text"],
+.contact-section input[type="tel"],
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Input and Textarea Focus Styling */
+.contact-section input[type="text"]:focus,
+.contact-section input[type="tel"]:focus,
+.contact-section textarea:focus {
+    border-color: #007bff;  /* Blue border on focus */
+    outline: none;
+}
+
+/* Button Styling */
+.contact-section button {
+    background-color: #28a745; /* Green button */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.contact-section button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 20px;
+    }
+    
+    .contact-section h2 {
+        font-size: 24px;
+    }
+
+    .contact-section input[type="text"],
+    .contact-section input[type="tel"],
+    .contact-section textarea {
+        font-size: 14px;
+    }
+
+    .contact-section button {
+        font-size: 14px;
+    }
+}
+
