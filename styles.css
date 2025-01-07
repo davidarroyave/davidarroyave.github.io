@@ -278,7 +278,7 @@ img:hover {
 }
 
 .video-item:hover {
-    transform: scale(1.05);
+    transform: scale(1);
 }
 
 .project-video {
@@ -319,6 +319,10 @@ img:hover {
 
 .video-overlay p {
     font-size: 1rem;
+}
+.video-overlay button, 
+.video-overlay a {
+    pointer-events: auto; /* Allows specific elements to be clickable */
 }
 
 @media (max-width: 768px) {
