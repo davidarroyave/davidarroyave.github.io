@@ -286,6 +286,7 @@ img:hover {
     height: auto;
     border-radius: 10px;
     transition: 0.3s ease;
+    cursor: pointer;
 }
 
 .video-overlay {
@@ -304,6 +305,7 @@ img:hover {
     padding: 10px;
     transition: 0.3s ease;
     border-radius: 10px;
+    pointer-events: none; /*This allows clicks to pass through hover */
 }
 
 .video-item:hover .video-overlay {
