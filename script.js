@@ -88,6 +88,35 @@ function nextSlide2() {
 
 showSlide2(currentIndex2);
 
+let currentIndex3 = 0;
+const carouselImages3 = document.querySelector('.carousel-images3');
+const images3 = document.querySelectorAll('.carousel-images3 .gallery-image3');
+
+function showSlide3(index) {
+    if (index < 0) {
+        currentIndex3 = images3.length - 1; 
+    } else if (index >= images3.length) {
+        currentIndex3 = 0; 
+    } else {
+        currentIndex3 = index; 
+    }
+
+    
+    const translateX = -currentIndex3 * 100;
+    carouselImages3.style.transform = `translateX(${translateX}%)`;
+}
+
+function prevSlide3() {
+    showSlide3(currentIndex3 - 1); 
+}
+
+function nextSlide3() {
+    showSlide3(currentIndex3 + 1); 
+}
+
+showSlide3(currentIndex3);
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const videoItems = document.querySelectorAll('.video-item');
@@ -123,14 +152,14 @@ var i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
-    console.log("Acordeón clickeado"); // Verificar si el clic está funcionando
+    console.log("Accordion clicked"); // validate if clic is working
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
 
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
     } else {
-      console.log("Panel ScrollHeight: ", panel.scrollHeight); // Verifica el valor de scrollHeight
+      console.log("Panel ScrollHeight: ", panel.scrollHeight); // Validate scrollHeight value
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });

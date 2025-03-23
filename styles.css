@@ -107,6 +107,15 @@ ul {
     margin: 20px auto;
 }
 
+.carousel3{
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    max-height: 440px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
 .carousel {
     margin-left: 40%;
     margin-top: -60%;
@@ -118,21 +127,27 @@ ul {
 
 }
 
-.carousel-images, .carousel-images2 {
+.carousel3 {
+    margin-left: 30%;
+    margin-top: -3%;
+}
+
+
+.carousel-images, .carousel-images2, .carousel-images3 {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%;
 }
 
 
-.carousel-images, .carousel-images2 {
+.carousel-images, .carousel-images2, .carousel-images3 {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%;
 }
 
 
-.gallery-image, .gallery-image2 {
+.gallery-image, .gallery-image2, .gallery-image3 {
     min-width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -140,7 +155,7 @@ ul {
     display: block;
 }
 
-.prev-btn, .next-btn, .prev-btn2, .next-btn2 {
+.prev-btn, .next-btn, .prev-btn2, .next-btn2, .prev-btn3, .next-btn3 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -153,18 +168,20 @@ ul {
     z-index: 10;
 }
 
-.prev-btn, .prev-btn2 {
+.prev-btn, .prev-btn2, .prev-btn3 {
     left: 10px;
 }
 
-.next-btn, .next-btn2 {
+.next-btn, .next-btn2, .next-btn3 {
     right: 10px;
 }
 
 .prev-btn:hover, .next-btn:hover,
-.prev-btn2:hover, .next-btn2:hover {
+.prev-btn2:hover, .next-btn2:hover
+.prev-btn3:hover, .next-btn3:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
+
 
 .image-gallery2 {
     display: grid;
