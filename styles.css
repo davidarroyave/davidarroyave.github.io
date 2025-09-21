@@ -189,6 +189,8 @@ ul {
     gap: -5px;
     justify-items: center;
     margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .gallery-image {
