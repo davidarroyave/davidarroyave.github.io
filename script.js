@@ -29,92 +29,157 @@ function openfullimg(src) {
 
 
 
-let currentIndex1 = 0;
-const carouselImages1 = document.querySelector('.carousel-images');
-const images1 = document.querySelectorAll('.carousel-images .gallery-image');
+// ============================================
+// REUSABLE CAROUSEL CLASS
+// ============================================
 
-function showSlide1(index) {
-    if (index < 0) {
-        currentIndex1 = images1.length - 1; 
-    } else if (index >= images1.length) {
-        currentIndex1 = 0; 
-    } else {
-        currentIndex1 = index; 
+class ImageCarousel {
+    constructor(containerElement) {
+        this.container = containerElement;
+        this.images = this.container.querySelectorAll('img');
+        this.currentIndex = 0;
+        this.prevBtn = this.container.parentElement.querySelector('.prev-btn');
+        this.nextBtn = this.container.parentElement.querySelector('.next-btn');
+        
+        this.init();
     }
 
+    init() {
+        if (this.images.length === 0) return;
+        
+        // Auto-attach event listeners
+        if (this.prevBtn) this.prevBtn.addEventListener('click', () => this.prev());
+        if (this.nextBtn) this.nextBtn.addEventListener('click', () => this.next());
+        
+        this.showSlide(0);
+    }
+
+    showSlide(index) {
+        if (index < 0) {
+            this.currentIndex = this.images.length - 1;
+        } else if (index >= this.images.length) {
+            this.currentIndex = 0;
+        } else {
+            this.currentIndex = index;
+        }
+
+        const translateX = -this.currentIndex * 100;
+        this.container.style.transform = `translateX(${translateX}%)`;
+    }
+
+    prev() {
+        this.showSlide(this.currentIndex - 1);
+    }
+
+    next() {
+        this.showSlide(this.currentIndex + 1);
+    }
+}
+
+// ============================================
+// AUTO-DISCOVER AND INITIALIZE ALL CAROUSELS
+// ============================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Find all carousel containers
+    const carouselContainers = document.querySelectorAll(
+        '.carousel-images, .carousel-images2, .carousel-images3'
+    );
     
-    const translateX = -currentIndex1 * 100;
-    carouselImages1.style.transform = `translateX(${translateX}%)`;
-}
+    // Create a carousel instance for each
+    carouselContainers.forEach(container => {
+        new ImageCarousel(container);
+    });
 
-function prevSlide1() {
-    showSlide1(currentIndex1 - 1); 
-}
+    // ========================================
+    // REST OF YOUR CODE
+    // ========================================
 
-function nextSlide1() {
-    showSlide1(currentIndex1 + 1); 
-}
+    // Video play/pause functionality
+    const videoItems = document.querySelectorAll('.video-item');
+    videoItems.forEach(item => {
+        const video = item.querySelector('.project-video');
+        const overlay = item.querySelector('.video-overlay');
 
+        item.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+                overlay.style.opacity = 0;
+            } else {
+                video.pause();
+                overlay.style.opacity = 1;
+            }
+        });
 
-showSlide1(currentIndex1);
+        overlay.addEventListener('click', (e) => {
+            e.stopPropagation();
+            video.pause();
+            overlay.style.opacity = 1;
+        });
+    });
 
+    // Accordion functionality
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            const panel = this.nextElementSibling;
 
-let currentIndex2 = 0;
-const carouselImages2 = document.querySelector('.carousel-images2');
-const images2 = document.querySelectorAll('.carousel-images2 .gallery-image2');
-
-function showSlide2(index) {
-    if (index < 0) {
-        currentIndex2 = images2.length - 1; 
-    } else if (index >= images2.length) {
-        currentIndex2 = 0; 
-    } else {
-        currentIndex2 = index; 
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
     }
 
-
-    const translateX = -currentIndex2 * 100;
-    carouselImages2.style.transform = `translateX(${translateX}%)`;
-}
-
-function prevSlide2() {
-    showSlide2(currentIndex2 - 1); 
-}
-
-function nextSlide2() {
-    showSlide2(currentIndex2 + 1); 
-}
-
-
-showSlide2(currentIndex2);
-
-let currentIndex3 = 0;
-const carouselImages3 = document.querySelector('.carousel-images3');
-const images3 = document.querySelectorAll('.carousel-images3 .gallery-image3');
-
-function showSlide3(index) {
-    if (index < 0) {
-        currentIndex3 = images3.length - 1; 
-    } else if (index >= images3.length) {
-        currentIndex3 = 0; 
-    } else {
-        currentIndex3 = index; 
+    // Phone input - numbers only
+    const phoneInput = document.getElementById("phone");
+    if (phoneInput) {
+        phoneInput.addEventListener("input", function(event) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
     }
+});
 
-    
-    const translateX = -currentIndex3 * 100;
-    carouselImages3.style.transform = `translateX(${translateX}%)`;
+// ============================================
+// FULL IMAGE VIEWER
+// ============================================
+
+function openfullimg(src) {
+    const fullImg = document.createElement('div');
+    Object.assign(fullImg.style, {
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        width: '100vw',
+        height: '100vh',
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: '10000'
+    });
+
+    const img = document.createElement('img');
+    img.src = src;
+    Object.assign(img.style, {
+        maxWidth: '90%',
+        maxHeight: '90%',
+        border: '5px solid white',
+        borderRadius: '10px',
+        cursor: 'pointer'
+    });
+
+    img.onclick = () => {
+        document.body.removeChild(fullImg);
+    };
+
+    fullImg.appendChild(img);
+    document.body.appendChild(fullImg);
 }
 
-function prevSlide3() {
-    showSlide3(currentIndex3 - 1); 
-}
 
-function nextSlide3() {
-    showSlide3(currentIndex3 + 1); 
-}
-
-showSlide3(currentIndex3);
 
 
 
