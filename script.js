@@ -1,3 +1,10 @@
+/*
+ MIT License
+ Copyright (c) 2025 Juan David Arroyave Ramirez
+ See LICENSE file in the project root for full license text.
+*/
+
+
 function openfullimg(src) {
     const fullImg = document.createElement('div');
     fullImg.style.position = 'fixed';
