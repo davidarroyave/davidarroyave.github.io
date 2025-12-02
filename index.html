@@ -56,47 +56,137 @@
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- Home Section -->
-        <section id="home" class="home-section">
-            <img src="images\1716252453388.jpg" class="responsive-image" width="150" height="250" onclick="openfullimg(this.src)" alt="Juan David Arroyave Ramirez">
-            <br>
-            <h3>Juan David Arroyave Ramirez</h3>
-            <p><i>Artificial Intelligence Specialist 🤖</i></p>
-        <section id="expertise" class="expertise-section">
-            <h2>⚡Areas of Expertise:</h2>
-            <ul class="skills-list">
-                <li>🔹 Machine Learning Engineering </li>
-                <li>    🔹 MLOps & Production Systems </li>
-                <li>    🔹 MLFlow tracking for reproducibility & experiment management </li>
-                <li>    🔹 Software design and development </li>
-                <li>    🔹 Automation: Python, VBA, GitLab CI/CD </li>
-                <li>    🔹 Version Control & Collaboration: Git, GitHub, GitLab </li>
-                <li>    🔹 Containerization Docker & Kubernetes </li>
-                <li>    🔹 Business Intelligence: Power BI, Advanced Excel & PowerQuery </li>
-                <li>    🔹 PDF/Web scraping </li>
-                <li>    🔹 SQL Server </li>
-                <li>    🔹 LaTex (IEEE) </li>
-                <li>    🔹Flowcharts - Schematic Diagram</li>
-                <li>    <b>🔸 Data Science & Analytics:</b></li>
-                <li>    ▪️Machine Learning: (Traditional Algorithms)</li>
-                <li>    ▪️Deep Learning (Neural Networks, Computer Vision)</li>
-                <li>    ▪️Ensemble Methods (Bagging, Boosting, Stacking)</li>
-                <li>    ▪️Generative AI & Discriminative Modeling</li>
-                <li>    ▪️Sequential Intelligence (Time Series, Autoregressive Modeling, Transformers-NLP)</li>
-            </ul>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-profile">
+                    <img src="images\1716252453388.jpg" class="profile-avatar" onclick="openfullimg(this.src)" alt="Juan David Arroyave Ramirez">
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Juan David Arroyave Ramirez</h1>
+                    <p class="hero-subtitle"> Artificial Intelligence Specialist</p>
+                    <p class="hero-description">Transforming data into intelligent solutions through cutting-edge machine learning and production-ready AI systems</p>
+                </div>
+            </div>
         </section>
-        <section id="education" class="education-section">
-        <h2>Education</h2>
-        <ul class="education-list">
-            <li>Artificial Intelligence Specialist (<a href="https://www.uao.edu.co/programa/especializacion-en-inteligencia-artificial/" target="_blank" rel="noopener noreferrer">UAO</a>)</li>
-            <li>Bachelor's Degree English-Spanish (<a href="https://www.upb.edu.co/es/home" target="_blank" rel="noopener noreferrer">UPB</a>)</li>
-            <li>Full Stack Development (<a href="https://www.ilo.org/" target="_blank" rel="noopener noreferrer">OIT</a>)</li>
-            <li>JR Full Stack Development (<a href="https://ime.edu.co/" target="_blank" rel="noopener noreferrer">IME</a>)</li>
-            <li>Business Operations (<a href="https://www.sena.edu.co/" target="_blank" rel="noopener noreferrer">SENA</a>)</li>
-            <li>Introduction to RPA (<a href="https://pathfinder.automationanywhere.com/university" target="_blank" rel="noopener noreferrer">Automation Anywhere</a>)</li>
-        </ul>
-    </section>
-        <br>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <h2 class="section-title"> About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <p class="about-text">
+                    AI Specialist with expertise in building end-to-end machine learning solutions. Passionate about bridging the gap 
+                    between research and production, with a proven track record in deploying scalable AI systems that drive real-world impact.
+                </p>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="expertise" class="tech-stack-section">
+            <div class="section-header">
+                <h2 class="section-title">⚡ Technical Expertise</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- ML Engineering -->
+                <div class="skill-category">
+                    <div class="category-icon">🤖</div>
+                    <h3 class="category-title">Machine Learning Engineering</h3>
+                    <ul class="skill-items">
+                        <li>Traditional ML Algorithms</li>
+                        <li>Deep Learning & Neural Networks</li>
+                        <li>Computer Vision</li>
+                        <li>Ensemble Methods</li>
+                        <li>Autoregressive Modeling, Transformers-NLP</li>
+                        <li>Generative AI & Discriminative Modeling</li>
+                    </ul>
+                </div>
+
+                <!-- MLOps & Production -->
+                <div class="skill-category">
+                    <div class="category-icon">🚀</div>
+                    <h3 class="category-title">MLOps & Production</h3>
+                    <ul class="skill-items">
+                        <li>MLFlow Tracking</li>
+                        <li>Docker & Kubernetes</li>
+                        <li>GitLab - CI/CD Pipelines</li>
+                        <li>Model Deployment - Cloud Computing</li>
+                        <li>Git/GitHub & Data Version Control (DVC)</li>
+                    </ul>
+                </div>
+
+                <!-- Development -->
+                <div class="skill-category">
+                    <div class="category-icon">💻</div>
+                    <h3 class="category-title">Software Development</h3>
+                    <ul class="skill-items">
+                        <li>Python Development</li>
+                        <li>Web Development</li>
+                        <li>Web & PDF Scraping</li>
+                        <li>Database Design (SQL)</li>
+                        <li>Automation: Python, VBA (Macros), Power Automate</li>
+                    </ul>
+                </div>
+
+                <!-- Data & BI -->
+                <div class="skill-category">
+                    <div class="category-icon">📊</div>
+                    <h3 class="category-title">Data & Analytics</h3>
+                    <ul class="skill-items">
+                        <li>Time Series Analysis</li>
+                        <li>Power BI Dashboards</li>
+                        <li>Advanced Excel & proficiency in PowerQuery  for ETL</li>
+                        <li>LaTex for IEEE papers</li>
+                        <li>Flowcharts and Schematic Diagrams</li>
+                        <!-- <li>Data Visualization with Dash & Quarto</li> -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education-section-modern">
+            <div class="section-header">
+                <h2 class="section-title">Education & Certifications</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="edu-icon">🎓</div>
+                    <h3>Artificial Intelligence Specialist</h3>
+                    <p class="edu-institution"><a href="https://www.uao.edu.co/programa/especializacion-en-inteligencia-artificial/" target="_blank" rel="noopener noreferrer">Universidad Autónoma de Occidente</a></p>
+                </div>
+                
+                <div class="education-card">
+                    <div class="edu-icon">📚</div>
+                    <h3>Bachelor's Degree English-Spanish</h3>
+                    <p class="edu-institution"><a href="https://www.upb.edu.co/es/home" target="_blank" rel="noopener noreferrer">Universidad Pontificia Bolivariana</a></p>
+                </div>
+                
+                <div class="education-card">
+                    <div class="edu-icon">💻</div>
+                    <h3>Full Stack Development</h3>
+                    <p class="edu-institution"><a href="https://www.ilo.org/" target="_blank" rel="noopener noreferrer">International Labour Organization</a></p>
+                </div>
+                
+                <div class="education-card">
+                    <div class="edu-icon">🔧</div>
+                    <h3>Business Operations</h3>
+                    <p class="edu-institution"><a href="https://www.sena.edu.co/" target="_blank" rel="noopener noreferrer">SENA</a></p>
+                </div>
+                
+                <div class="education-card">
+                    <div class="edu-icon">🤖</div>
+                    <h3>Introduction to RPA</h3>
+                    <p class="edu-institution"><a href="https://pathfinder.automationanywhere.com/university" target="_blank" rel="noopener noreferrer">Automation Anywhere</a></p>
+                </div>
+            </div>
+        </section>
 
         <!-- Dashboards Section -->
         <section id="dashboards" class="carousel-container">
@@ -139,9 +229,11 @@
         <br>
         <!-- Projects Section -->
         <section id="projects" class="projects-section">
-            <br>
-            <h2>Projects</h2>
-            <br>
+            <div class="section-header">
+                <h2 class="section-title">💡 Featured Projects</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Real-world AI solutions from research to production</p>
+            </div>
             <div class="video-gallery">
                 
                 <!-- Project Video 1 -->
