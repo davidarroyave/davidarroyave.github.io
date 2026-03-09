@@ -1,1 +1,7 @@
+# git add .gitattributes
+# git commit -m "Add .gitattributes for LFS tracking of video files"
+# git track video/ArymaDemoVideo1.mp4
+# git add video/ArymaDemoVideo1.mp4
+# git commit -m "Track video file with LFS"
+
 video/ArymaDemoVideo1.mp4 filter=lfs diff=lfs merge=lfs -text
